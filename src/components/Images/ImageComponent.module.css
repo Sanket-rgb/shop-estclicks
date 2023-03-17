@@ -1,0 +1,8 @@
+.image-container {
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+}

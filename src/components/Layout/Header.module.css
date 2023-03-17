@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  aspect-ratio: 16/2;
+  justify-content: center;
+  align-items: center;
+  background: yellow;
+}
+
+.button {
+  font-size: 2vw;
+  display: flex;
+  border: none;
+  font-size: large;
+  background: transparent;
+}
+
+.button:hover,
+.button:active {
+  background: black;
+}
