@@ -5,6 +5,9 @@ const images = [
     category: "ANIMALS",
     description: "Prescription : Vitamin Sea",
     location: "San Diego, CA",
+    price: "$120,00",
+    quantity: "20",
+    color: "#43272c",
   },
   {
     id: "1",
@@ -12,6 +15,9 @@ const images = [
     category: "ANIMALS",
     description: "Sealiously cute",
     location: "San Diego, CA",
+    price: "$150,00",
+    quantity: "30",
+    color: "#195245",
   },
   {
     id: "2",
@@ -19,6 +25,9 @@ const images = [
     category: "CITY",
     description: "Spotlight to the City lights",
     location: "Dallas, TX",
+    price: "$200,00",
+    quantity: "25",
+    color: "#06384b",
   },
   {
     id: "3",
@@ -26,6 +35,9 @@ const images = [
     category: "CITY",
     description: "The sky's the limit at Reunion Tower",
     location: "Dallas, TX",
+    price: "$160,00",
+    quantity: "20",
+    color: "#ababab",
   },
   {
     id: "4",
@@ -33,6 +45,9 @@ const images = [
     category: "FOOD",
     description: "How festive this bowl looks!",
     location: "Fort-Worth, TX",
+    price: "$80,00",
+    quantity: "50",
+    color: "#023473",
   },
   {
     id: "5",
@@ -40,6 +55,9 @@ const images = [
     category: "NATURE",
     description: "Into the Woods",
     location: "Bellingham, WA",
+    price: "$320,00",
+    quantity: "10",
+    color: "#2d2d2d",
   },
   {
     id: "6",
@@ -47,6 +65,9 @@ const images = [
     category: "NATURE",
     description: "Somewhere on the Journey",
     location: "Samish Bay, WA",
+    price: "$120,00",
+    quantity: "20",
+    color: "#f7eb01",
   },
   {
     id: "7",
@@ -54,6 +75,9 @@ const images = [
     category: "NATURE",
     description: "Start where you are \n Use What you have\n Do what you can!",
     location: "Seattle, WA",
+    price: "$100,00",
+    quantity: "30",
+    color: "#e49003",
   },
   {
     id: "8",
@@ -61,6 +85,9 @@ const images = [
     category: "OTHER",
     description: "Geometry",
     location: "Fort-Worth, TX",
+    price: "$150,00",
+    quantity: "15",
+    color: "#1fd3f8",
   },
   {
     id: "9",
@@ -68,6 +95,9 @@ const images = [
     category: "OTHER",
     description: "Carousel",
     location: "Seattle, WA",
+    price: "$200,00",
+    quantity: "60",
+    color: "#140970",
   },
   {
     id: "10",
@@ -75,6 +105,9 @@ const images = [
     category: "PORTRAIT",
     description: "Getting ahead",
     location: "Seattle, WA",
+    price: "$130,00",
+    quantity: "20",
+    color: "#f45640",
   },
   {
     id: "11",
@@ -82,6 +115,9 @@ const images = [
     category: "PORTRAIT",
     description: "Eyes on the Stars",
     location: "Seattle, WA",
+    price: "$170,00",
+    quantity: "35",
+    color: "#005b63",
   },
   {
     id: "12",
@@ -89,6 +125,9 @@ const images = [
     category: "PORTRAIT",
     description: "Growth",
     location: "Seattle, WA",
+    price: "$190,00",
+    quantity: "10",
+    color: "#dbd7d1",
   },
   {
     id: "13",
@@ -96,6 +135,9 @@ const images = [
     category: "VEHICLE",
     description: "1100 Classic Coffman",
     location: "Tempe, AZ",
+    price: "$220,00",
+    quantity: "30",
+    color: "#1AD0F6",
   },
   {
     id: "14",
@@ -103,7 +145,25 @@ const images = [
     category: "VEHICLE",
     description: "Grand Theft Auto",
     location: "Los Angeles, CA",
+    price: "$60,00",
+    quantity: "50",
+    color: "#0a0048",
   },
 ]
 
+// const colors = [
+//   // "#43272c",
+//   // "#195245",
+//   // "#06384b",
+//   // "#ababab",
+//   // "#023473",
+//   // "#2d2d2d",
+//   // "#f7eb01",
+//   // "#e49003",
+//   // "#1fd3f8",
+//   // "#140970",
+//   // "#f45640",
+//   // "#005b63",
+//   // "#dbd7d1",
+// ]
 export { images }

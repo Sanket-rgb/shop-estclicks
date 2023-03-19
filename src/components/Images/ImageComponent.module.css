@@ -1,8 +1,17 @@
-.image-container {
+.grid-cell {
   aspect-ratio: 1;
-  position: relative;
+  /* position: relative; */
+  /* background: pink; */
+  /* cursor: pointer; */
 }
 
+.image-container {
+  margin: 1rem 2rem;
+  height: 100%;
+  background: white;
+  position: relative;
+}
 .image {
+  padding: 0.5rem 0.5rem;
   object-fit: cover;
 }

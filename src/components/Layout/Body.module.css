@@ -2,3 +2,21 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+
+@media screen and (max-width: 988px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
