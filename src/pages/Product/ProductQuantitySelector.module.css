@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper > Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  aspect-ratio: 16/9;
+  font-size: large;
+  padding: 0;
+  background: transparent;
+}
+
+.wrapper > h4 {
+  color: white;
+  font-size: 1.5vw;
+}
+
+.button {
+  background: transparent;
+}

@@ -2,7 +2,10 @@
   box-sizing: border-box;
   margin: 0px;
 }
-
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
 body {
   font-family: Brown-Regular, Helvetica Neue, Helvetica, Arial, sans-serif;
   background-color: #fff;
