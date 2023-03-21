@@ -12,6 +12,9 @@ const Footer = () => {
         <p>Returns</p>
         <p>Contact</p>
       </div>
+      <div className={classes["only-portrait"]}>
+        <p>Shipping & Returns</p>
+      </div>
     </footer>
   )
 }

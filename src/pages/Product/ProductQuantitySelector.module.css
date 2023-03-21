@@ -1,26 +1,63 @@
-.wrapper {
+.info-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 40%;
+  margin: 1.2rem 1.2rem 1.2rem 0rem;
+  gap: 0.5rem;
+}
+
+.inc-dec-buttons {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
 }
 
-.wrapper > Button {
+.inc-dec-buttons > Button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 35%;
-  aspect-ratio: 16/9;
+  font-size: 1.1333em;
+  padding: 0.2em 1em;
   font-size: large;
-  padding: 0;
   background: transparent;
+  cursor: pointer;
 }
 
-.wrapper > h4 {
+.inc-dec-buttons > h4 {
   color: white;
   font-size: 1.5vw;
 }
 
-.button {
+.add-to-cart {
   background: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 1em 0.5em;
+  font-size: x-small;
+  letter-spacing: 0.25em;
+  /* line-height: 1.5; */
+}
+
+@media screen and (min-width: 451px) and (max-width: 862px) {
+  .info-buttons {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .inc-dec-buttons > Button {
+    width: 25%;
+    height: 80%;
+  }
+  .add-to-cart {
+    height: 30%;
+  }
+
+  .inc-dec-buttons > h4 {
+    color: white;
+    font-size: 2vw;
+  }
 }

@@ -1,11 +1,15 @@
 .header {
   display: flex;
-  position: relative;
-  top: 0;
-  aspect-ratio: 16/2;
-  width: 100%;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  /* aspect-ratio: 16/2; */
+  height: 155px;
+  width: 100%;
+  background: white;
+  z-index: 1;
 }
 
 .logo-container {
@@ -14,33 +18,45 @@
   position: relative;
   /* background: red; */
 }
-.image {
-  cursor: pointer;
-  object-fit: contain;
-}
+/* .image {
+  height: auto;
+  width: auto;
+} */
 
 .cart-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  right: 1rem;
-  aspect-ratio: 1;
-  width: 3.5vw;
+  right: 0.5rem;
+  /* aspect-ratio: 1; */
+  text-decoration: none;
+  color: black;
 }
 
 .quantity {
   position: relative;
   text-align: center;
-  font-size: 1.5vw;
-  top: 0.7rem;
-  width: 100%;
+  font-size: 13px;
+  right: 2px;
+  width: 50px;
+  height: 13px;
   object-fit: cover;
 }
 
-.image-container {
+/* .image-container {
   aspect-ratio: 1;
-  width: 70%;
-  height: 70%;
   position: relative;
+} */
+
+@media screen and (max-width: 770px) {
+  .header {
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 1029px) {
+  .header {
+    position: sticky;
+  }
 }

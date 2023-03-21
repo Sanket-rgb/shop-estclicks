@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  height: 9vh;
+  height: 64px;
   /* aspect-ratio: 16/1; */
   width: 100%;
   background: white;
@@ -15,7 +15,7 @@
 .form {
   display: flex;
   padding: 0rem 1rem;
-  height: 50%;
+  /* height: 50%; */
 }
 
 .form > input {
@@ -59,42 +59,71 @@
   border-bottom: 1px solid #222;
 }
 
-@media screen and (max-width: 800px) {
+.only-portrait {
+  display: none;
+}
+
+@media screen and (max-width: 770px) {
   .grid {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 20vh;
+    justify-content: space-around;
+    height: 111.29px;
     position: relative;
-    /* width: 100vw; */
   }
 
   .form {
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
     width: 100%;
-    gap: 6px;
+    height: 63.29px;
+    margin-top: 1rem;
+    padding: 0;
   }
 
   .form > input {
-    width: 250px;
-    height: 30px;
+    width: 20em;
+    height: 27.59px;
     margin: 0;
     text-align: center;
     padding: 0;
     font-size: small;
+    margin-bottom: 0.4rem;
   }
   .button {
-    width: 250px;
-    height: 30px;
+    width: 20em;
+    height: 27.59px;
     font-size: small;
     padding: 0;
     font-weight: bold;
   }
   .extra-info {
     width: 100%;
-    justify-content: space-evenly;
+    /* height: 100px; */
+    justify-content: space-around;
     font-size: medium;
+    margin: 0rem;
+  }
+  .extra-info > p {
+    display: flex;
+    align-items: center;
+    padding: 0px 38.36px;
+    height: 48px;
+  }
+}
+
+@media screen and (max-width: 636px) {
+  .only-portrait {
+    display: flex;
+    align-items: center;
+    height: 48px;
+  }
+  .only-portrait > p {
+    padding: 0px 38.36px;
+  }
+
+  .extra-info {
+    display: none;
   }
 }

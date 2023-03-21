@@ -1,11 +1,12 @@
-import ProductQuantitySelector from "@/pages/Product/ProductQuantitySelector"
-import Image from "next/image"
-import { useRouter } from "next/router"
-import Button from "../../components/UI/Button"
-import classes from "./ProductDetails.module.css"
+import ProductQuantitySelector from "@/pages/Product/ProductQuantitySelector";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import Button from "../../components/UI/Button";
+import classes from "./ProductDetails.module.css";
 const ProductDetails = () => {
-  const router = useRouter()
-  const query = router.query
+  const router = useRouter();
+  const query = router.query;
 
   return (
     <section className={classes["product-grid-container"]}>
@@ -53,29 +54,38 @@ const ProductDetails = () => {
       <div style={{ background: query.color }} className={classes["info"]}>
         <div className={classes["info-description"]}>
           <h4>{query.description}</h4>
-          <div>
-            <p>Comes in 2 sizes</p>
-            <p>Framed 40x50cm and 50x40cm</p>
+          <div className={classes.details}>
+            <p>Framed</p>
+            <p>40x50cm Digital Print</p>
+
             <br></br>
-            <p>Digital Print</p>
 
             <p>Limited edition of {query.quantity} each</p>
-          </div>
-          <div>
+            <br></br>
             <p>Signed and numbered</p>
-            <p>@estClicks original</p>
+            <p>
+              @
+              <Link
+                href={"https://www.instagram.com/estclicks/"}
+                className={classes["social-media-link"]}
+                target="_blank"
+              >
+                estclicks
+              </Link>{" "}
+              original
+            </p>
           </div>
 
           <div className={classes.price}>
-            <p>{query.price}</p>
+            <p>${+query.price},00</p>
           </div>
         </div>
-        <div className={classes["info-buttons"]}>
-          <ProductQuantitySelector quantity={query.quantity} />
-        </div>
+
+        <ProductQuantitySelector data={query} />
       </div>
       <div className={classes["navigation"]}>
         <Image
+          style={{ cursor: "pointer" }}
           src="https://cdn.shopify.com/s/files/1/0516/4082/8070/t/2/assets/prev.svg"
           width={12}
           height={12}
@@ -83,14 +93,15 @@ const ProductDetails = () => {
         ></Image>
         <p>Browse all items</p>
         <Image
+          style={{ cursor: "pointer" }}
           src="https://cdn.shopify.com/s/files/1/0516/4082/8070/t/2/assets/next.svg"
           width={12}
           height={12}
-          alt="left-arrow"
+          alt="right-arrow"
         ></Image>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ProductDetails
+export default ProductDetails;
