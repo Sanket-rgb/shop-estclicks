@@ -1,17 +1,56 @@
 .grid-cell {
   aspect-ratio: 1;
-  /* position: relative; */
-  /* background: pink; */
-  /* cursor: pointer; */
+  padding: 1rem 2rem;
 }
 
 .image-container {
-  margin: 1rem 2rem;
   height: 100%;
   background: white;
   position: relative;
 }
+
 .image {
   padding: 0.5rem 0.5rem;
   object-fit: cover;
+}
+
+.bar {
+  height: 1px;
+  width: 2.5%;
+  margin: 0.5rem;
+  background: white;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10.56px;
+
+  cursor: pointer;
+  color: white;
+
+  font-size: 1.0265700483vw;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+}
+
+.description:hover {
+  background: var();
+  transition: 1s ease-in-out;
+}
+
+.description > div:first-child {
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  /* line-height: 1.5; */
+}
+.description > div:last-child {
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  /* line-height: 1.5; */
 }
