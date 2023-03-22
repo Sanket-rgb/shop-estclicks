@@ -9,7 +9,7 @@ const ImageContainer = (props) => {
   //   setTimeout(function () {
   //     setHover(!hover);
   //   }, 2000);
-  // }, []);
+  // }, [hover]);
   const gridCellInvisibile = () => {
     setHover(true);
     // console.log()
@@ -24,7 +24,9 @@ const ImageContainer = (props) => {
       {!hover && (
         <div
           onTouchStart={gridCellInvisibile}
+          // onTouchEnd={gridCellVisibile}
           // onto
+          // ontouch
           onMouseOver={gridCellInvisibile}
           onMouseOut={gridCellVisibile}
           style={{ background: props.data.color }}
@@ -39,8 +41,8 @@ const ImageContainer = (props) => {
             pathname: "/Product/ProductDetails",
             query: props.data,
           }}
-          // onTouchStart={gridCellInvisibile}
-          onTouchEnd={gridCellVisibile}
+          onTouchMove={gridCellVisibile}
+          // onTouchEnd={gridCellVisibile}
           onMouseOver={gridCellInvisibile}
           onMouseOut={gridCellVisibile}
           className={classes.description}
