@@ -74,6 +74,22 @@ export const localDBSize = () => {
   }
 };
 
+export const cartTotal = () => {
+  const cartInstance = localStorage.getItem("cart");
+  let total = 0;
+
+  if (cartInstance) {
+    const cartList = JSON.parse(cartInstance);
+
+    for (let i = 0; i < cartList.length; i++) {
+      total = total + +cartList[i].quantity * +cartList[i].price;
+    }
+    return total;
+  } else {
+    return total;
+  }
+};
+
 //   const itemQuantity = localStorage.getItem(key);
 
 //   localStorage.setItem(key, +itemQuantity - 1);

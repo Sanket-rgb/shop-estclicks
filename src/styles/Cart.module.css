@@ -9,7 +9,7 @@
 }
 
 .cart > h1 {
-  font-size: 1.1333em;
+  font-size: 1.2em;
   margin-right: 6.52em -0.25em;
   margin-block-start: 0.67em;
   margin-block-end: 0.67em;
@@ -19,6 +19,10 @@
   line-height: 1.5;
 }
 
+.empty-cart {
+  font-size: 1vw;
+  margin-top: 1.5rem;
+}
 .cart-contents {
   display: flex;
   height: 100%;
@@ -28,6 +32,7 @@
 }
 .inc-dec-button-container {
   display: flex;
+  align-items: flex-end;
   gap: 2px;
 }
 
@@ -35,11 +40,12 @@
   cursor: pointer;
   position: relative;
 
-  padding: 1em;
+  padding: 0.7em;
   background: transparent;
   border: 1px solid #222;
-
-  aspect-ratio: 1;
+  height: 5px;
+  width: 5px;
+  /* aspect-ratio: 1; */
 }
 
 .product-details {
@@ -58,23 +64,36 @@
   width: 70%;
 }
 .item-subtotal {
+  display: flex;
+  align-self: flex-end;
   width: 30%;
 }
 
 .cart-total {
-  margin-top: 1rem;
   place-self: flex-end;
+  font-size: 1.1333em;
+  letter-spacing: 0.25em;
+  text-align: right;
+  margin-top: 2em;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .checkout-buttons {
   display: flex;
   justify-content: center;
 
-  margin-top: 4rem;
+  margin-top: 5rem;
   gap: 0.2rem;
 }
 
-.button {
+.button-wrapper {
+  width: 38.2%;
+}
+.button-wrapper > .button:last-child {
+  width: 100%;
+}
+.button:first-child {
   height: 5vh;
   width: 38.2%;
   padding: 5.28px 15.84px;
@@ -95,4 +114,39 @@
   color: white;
   background: #222;
   border: none;
+}
+
+@media screen and (max-width: 862px) {
+  .cart {
+    width: 100%;
+    padding: 4vw;
+  }
+  .cart > h1 {
+    font-size: 3.5vw;
+  }
+
+  .empty-cart {
+    font-size: 3vw;
+  }
+
+  .product-details {
+    font-size: 3.5vw;
+  }
+
+  .cart-total {
+    font-size: 3.5vw;
+  }
+  .checkout-buttons {
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 4rem;
+    font-size: 3vw;
+  }
+  .button-wrapper {
+    width: 60%;
+  }
+  .button:first-child {
+    width: 60%;
+  }
 }
