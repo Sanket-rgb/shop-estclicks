@@ -1,10 +1,15 @@
 import Link from "next/link";
 import classes from "./ImageComponent.module.css";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const ImageContainer = (props) => {
   const [hover, setHover] = useState(false);
 
+  // useEffect(() => {
+  //   setTimeout(function () {
+  //     setHover(!hover);
+  //   }, 2000);
+  // }, []);
   const gridCellInvisibile = () => {
     setHover(true);
     // console.log()
@@ -18,6 +23,8 @@ const ImageContainer = (props) => {
     <>
       {!hover && (
         <div
+          onTouchStart={gridCellInvisibile}
+          // onto
           onMouseOver={gridCellInvisibile}
           onMouseOut={gridCellVisibile}
           style={{ background: props.data.color }}
@@ -32,6 +39,8 @@ const ImageContainer = (props) => {
             pathname: "/Product/ProductDetails",
             query: props.data,
           }}
+          // onTouchStart={gridCellInvisibile}
+          onTouchEnd={gridCellVisibile}
           onMouseOver={gridCellInvisibile}
           onMouseOut={gridCellVisibile}
           className={classes.description}

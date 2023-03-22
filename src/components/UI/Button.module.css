@@ -12,9 +12,15 @@
   /* font-size: 1.1333em; */
 }
 
-.button:hover {
+/* .button:hover {
   background: white;
   border-color: black;
   color: black;
   transition: 0.2s;
+} */
+
+@media (hover: hover) {
+  .button:hover {
+    background: white;
+  }
 }

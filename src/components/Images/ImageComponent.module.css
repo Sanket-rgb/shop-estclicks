@@ -15,10 +15,11 @@
 }
 
 .bar {
-  height: 1px;
-  width: 2.5%;
+  height: 2px;
+  border-radius: 2px;
+  width: 4.5%;
   margin: 0.5rem;
-  background: white;
+  background: rgba(255, 255, 255, 0.726);
 }
 
 .description {
@@ -31,26 +32,38 @@
   cursor: pointer;
   color: white;
 
-  font-size: 1.0265700483vw;
+  aspect-ratio: 1;
+  font-size: 1vw;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
 }
 
-.description:hover {
-  background: var();
+/* .description:hover {
   transition: 1s ease-in-out;
-}
+} */
 
-.description > div:first-child {
+.description > div:first-child,
+.description > div:last-child {
   font-size: 1em;
   font-weight: 500;
   letter-spacing: 0.25em;
   /* line-height: 1.5; */
 }
-.description > div:last-child {
-  font-size: 1em;
-  font-weight: 400;
-  letter-spacing: 0.25em;
-  /* line-height: 1.5; */
+
+@media (max-width: 922px) {
+  .description {
+    font-size: 1.2vw;
+  }
 }
+@media (max-width: 645px) {
+  .description {
+    font-size: 2vw;
+  }
+}
+/* 
+@media (hover: hover) {
+  .description:hover {
+    background: white;
+  }
+} */

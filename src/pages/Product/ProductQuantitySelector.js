@@ -44,7 +44,7 @@ const ProductQuantitySelector = (props) => {
         className={classes["add-to-cart"]}
         onClick={() => addToCart(props.data.description, props.data.price)}
       >
-        buy now
+        add to cart
       </Button>
     </div>
   );

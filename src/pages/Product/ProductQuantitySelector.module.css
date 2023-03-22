@@ -47,17 +47,9 @@
   }
 }
 
-@media screen and (max-width: 450px) {
-  .inc-dec-buttons > Button {
-    width: 25%;
-    height: 80%;
-  }
-  .add-to-cart {
-    height: 30%;
-  }
-
+@media screen and (max-width: 862px) {
   .inc-dec-buttons > h4 {
     color: white;
-    font-size: 2vw;
+    font-size: 3vw;
   }
 }

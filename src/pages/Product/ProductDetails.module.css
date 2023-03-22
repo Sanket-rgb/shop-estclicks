@@ -121,6 +121,7 @@
 
 .navigation {
   /* aspect-ratio: 16/9; */
+  height: 5vh;
   grid-area: navigation;
   display: flex;
   justify-content: space-between;
@@ -132,21 +133,34 @@
 @media screen and (max-width: 862px) {
   .product-grid-container {
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "primary-image secondary-image1"
-      "primary-image secondary-image2"
-      "info navigation";
+      "primary-image"
+      "primary-image "
+      "secondary-image1"
+      "secondary-image2"
+      "info"
+      "navigation";
   }
 
+  .secondary-image2 {
+    aspect-ratio: 16/11;
+  }
   .info-description > h4 {
-    font-size: 2em;
+    font-size: 3em;
+    margin-bottom: 0.5em;
   }
   .details {
-    font-size: 1.3vw;
+    font-size: 3vw;
   }
   .price {
-    font-size: 1.8vw;
+    font-size: 3vw;
+  }
+  .navigation {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    font-size: 2vw;
   }
 }
