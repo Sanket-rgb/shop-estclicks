@@ -12,7 +12,7 @@ const ImageContainer = (props) => {
   // }, [hover]);
   const gridCellInvisibile = () => {
     setHover(true);
-    // console.log()
+    console.log();
   };
 
   const gridCellVisibile = () => {
