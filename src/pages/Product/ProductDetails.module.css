@@ -113,8 +113,10 @@
 }
 .price {
   padding: 1rem 1rem 0rem 0rem;
-  font-weight: 400;
-  font-size: 1vw;
+  font-weight: 500;
+  font-size: 1.1vw;
+
+  letter-spacing: 0.25em;
 }
 
 .navigation {
@@ -145,6 +147,6 @@
     font-size: 1.3vw;
   }
   .price {
-    font-size: 2vw;
+    font-size: 1.8vw;
   }
 }

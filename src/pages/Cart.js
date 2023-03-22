@@ -2,11 +2,13 @@ import CartContext from "@/components/store/cart-context";
 import Button from "@/components/UI/Button";
 import {
   addItemToCart,
+  cartTotal,
   decrementItemFromCart,
   deleteItemFromCart,
   getInstance,
 } from "@/Utils/localStorage";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
 
 import classes from "../styles/Cart.module.css";
@@ -15,12 +17,11 @@ const Cart = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [valueChange, setValueChange] = useState("");
   const { setCartSize } = useContext(CartContext);
+  // const [cartTotal, setCartTotal]
 
   useEffect(() => {
     setCartList(JSON.parse(localStorage.getItem("cart")));
-    // setCartList((prevState) => {
-    //   return [cart];
-    // });
+
     setIsLoading(false);
   }, [valueChange]);
 
@@ -52,7 +53,9 @@ const Cart = () => {
     <div className={classes.cart}>
       <h1>cart</h1>
       {isLoading && <div>Loading...</div>}
-      {cartList.length === 0 && <div>Empty cart</div>}
+      {cartList.length === 0 && (
+        <div className={classes["empty-cart"]}>Your cart is empty!</div>
+      )}
 
       {!isLoading &&
         cartList !== 0 &&
@@ -107,10 +110,16 @@ const Cart = () => {
           </div>
         ))}
 
-      <div className={classes["cart-total"]}>total</div>
+      {cartList.length !== 0 && (
+        <div className={classes["cart-total"]}> ${cartTotal()},00</div>
+      )}
       <div className={classes["checkout-buttons"]}>
-        <Button className={classes.button}>checkout now</Button>
-        <Button className={classes.button}>keep shopping</Button>
+        {cartList.length !== 0 && (
+          <Button className={classes.button}>checkout now</Button>
+        )}
+        <Link href="/" className={classes["button-wrapper"]}>
+          <Button className={classes.button}>keep shopping</Button>
+        </Link>
       </div>
     </div>
   );
