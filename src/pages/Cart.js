@@ -1,56 +1,61 @@
-import CartContext from "@/components/store/cart-context";
-import Button from "@/components/UI/Button";
+import CartContext from "@/components/store/cart-context"
+import Button from "@/components/UI/Button"
 import {
   addItemToCart,
   cartTotal,
   decrementItemFromCart,
   deleteItemFromCart,
   getInstance,
-} from "@/Utils/localStorage";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useContext, useEffect, useState } from "react";
+} from "@/Utils/localStorage"
+import Head from "next/head"
+import Image from "next/image"
+import Link from "next/link"
+import React, { useContext, useEffect, useState } from "react"
 
-import classes from "../styles/Cart.module.css";
+import classes from "../styles/Cart.module.css"
 const Cart = () => {
-  const [cartList, setCartList] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [valueChange, setValueChange] = useState("");
-  const { setCartSize } = useContext(CartContext);
+  const [cartList, setCartList] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [valueChange, setValueChange] = useState("")
+  const { setCartSize } = useContext(CartContext)
   // const [cartTotal, setCartTotal]
 
   useEffect(() => {
-    setCartList(JSON.parse(localStorage.getItem("cart")));
+    setCartList(JSON.parse(localStorage.getItem("cart")))
 
-    setIsLoading(false);
-  }, [valueChange]);
+    setIsLoading(false)
+  }, [valueChange])
 
   const decrementItemHandler = (name) => {
-    decrementItemFromCart(name);
+    decrementItemFromCart(name)
     setCartSize((prevState) => {
-      return (+prevState - 1).toString();
-    });
-    setValueChange(Math.random().toString());
-  };
+      return (+prevState - 1).toString()
+    })
+    setValueChange(Math.random().toString())
+  }
 
   const incrementItemHandler = (name, price) => {
-    addItemToCart(name, price, "1");
+    addItemToCart(name, price, "1")
     setCartSize((prevState) => {
-      return +prevState + 1;
-    });
-    setValueChange(Math.random().toString());
-  };
+      return +prevState + 1
+    })
+    setValueChange(Math.random().toString())
+  }
 
   const removeItemHandler = (name, quantity) => {
-    deleteItemFromCart(name);
+    deleteItemFromCart(name)
     setCartSize((prevState) => {
-      return (+prevState - +quantity).toString();
-    });
-    setValueChange(Math.random().toString());
-  };
+      return (+prevState - +quantity).toString()
+    })
+    setValueChange(Math.random().toString())
+  }
 
   return (
     <div className={classes.cart}>
+      <Head>
+        <title>Cart | estclicks</title>
+        <meta name="description" content="estclicks cart summary." key="desc" />
+      </Head>
       <h1>cart</h1>
       {isLoading && <div>Loading...</div>}
       {cartList.length === 0 && (
@@ -122,7 +127,7 @@ const Cart = () => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Cart;
+export default Cart
