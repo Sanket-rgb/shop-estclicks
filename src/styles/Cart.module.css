@@ -25,6 +25,7 @@
 }
 .cart-contents {
   display: flex;
+  align-items: flex-end;
   height: 100%;
 
   margin-top: 1.5rem;
@@ -32,19 +33,18 @@
 }
 .inc-dec-button-container {
   display: flex;
-  align-items: flex-end;
-  gap: 2px;
+  gap: 3px;
 }
 
 .inc-dec-buttons {
   cursor: pointer;
   position: relative;
 
-  padding: 0.7em;
+  padding: 1em;
   background: transparent;
   border: 1px solid #222;
-  height: 5px;
-  width: 5px;
+  /* height: 5px;
+  width: 5px; */
   /* aspect-ratio: 1; */
 }
 
