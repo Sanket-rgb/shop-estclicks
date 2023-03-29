@@ -24,9 +24,6 @@ const ImageContainer = (props) => {
       {!hover && (
         <div
           onTouchStart={gridCellInvisibile}
-          // onTouchEnd={gridCellVisibile}
-          // onto
-          // ontouch
           onMouseOver={gridCellInvisibile}
           onMouseOut={gridCellVisibile}
           style={{ background: props.data.color }}

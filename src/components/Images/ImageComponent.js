@@ -6,6 +6,8 @@ const ImageComponent = (props) => {
   return (
     <ImageContainer data={props.data}>
       <Image
+        placeholder="blur"
+        blurDataURL="default"
         className={classes.image}
         src={props.data.path}
         alt={props.data.category}

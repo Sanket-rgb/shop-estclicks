@@ -1,17 +1,19 @@
-import { localDBSize } from "@/Utils/localStorage";
-import Image from "next/image";
-import Link from "next/link";
-import { useContext, useEffect, useState } from "react";
-import CartContext from "../store/cart-context";
-import { CartList } from "../store/cart-list";
-import classes from "./Header.module.css";
+import { localDBSize } from "@/Utils/localStorage"
+import Image from "next/image"
+import Link from "next/link"
+import { useContext, useEffect, useState } from "react"
+import CartContext from "../store/cart-context"
+import { CartList } from "../store/cart-list"
+import classes from "./Header.module.css"
 const Header = () => {
-  const { cartSize, setCartSize } = useContext(CartContext);
+  const { cartSize, setCartSize } = useContext(CartContext)
 
   return (
     <header className={classes.header}>
       <Link href="/" className={classes["logo-container"]}>
         <Image
+          placeholder="blur"
+          blurDataURL="default"
           className={classes.image}
           src="/CartIcon/skyline5.jpeg"
           alt="Cart - estclicks"
@@ -34,7 +36,7 @@ const Header = () => {
         ></Image>
       </Link>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
