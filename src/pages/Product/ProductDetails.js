@@ -1,4 +1,5 @@
 import ProductQuantitySelector from "@/pages/Product/ProductQuantitySelector"
+import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
@@ -10,6 +11,14 @@ const ProductDetails = () => {
 
   return (
     <section className={classes["product-grid-container"]}>
+      <Head>
+        <title>{query.description} | estclicks</title>
+        <meta
+          name="description"
+          content="Check out the collection of unique photographs."
+          key="desc"
+        />
+      </Head>
       <div
         style={{ background: query.color }}
         className={classes["primary-image"]}
