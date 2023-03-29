@@ -1,12 +1,12 @@
-import ProductQuantitySelector from "@/pages/Product/ProductQuantitySelector";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import Button from "../../components/UI/Button";
-import classes from "./ProductDetails.module.css";
+import ProductQuantitySelector from "@/pages/Product/ProductQuantitySelector"
+import Image from "next/image"
+import Link from "next/link"
+import { useRouter } from "next/router"
+import Button from "../../components/UI/Button"
+import classes from "./ProductDetails.module.css"
 const ProductDetails = () => {
-  const router = useRouter();
-  const query = router.query;
+  const router = useRouter()
+  const query = router.query
 
   return (
     <section className={classes["product-grid-container"]}>
@@ -16,6 +16,8 @@ const ProductDetails = () => {
       >
         <div className={classes["image-container"]}>
           <Image
+            placeholder="blur"
+            blurDataURL="default"
             className={classes.image}
             src={query.path}
             alt={query.category}
@@ -28,6 +30,8 @@ const ProductDetails = () => {
       </div>
       <div className={classes["secondary-image1"]}>
         <Image
+          placeholder="blur"
+          blurDataURL="default"
           className={classes.image}
           src={query.path}
           alt={query.category}
@@ -40,6 +44,8 @@ const ProductDetails = () => {
       <div className={classes["secondary-image2"]}>
         <div className={classes["secondary-image2-container"]}>
           <Image
+            placeholder="blur"
+            blurDataURL="default"
             className={classes.image2}
             src={query.path}
             alt={query.category}
@@ -101,7 +107,7 @@ const ProductDetails = () => {
         ></Image>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ProductDetails;
+export default ProductDetails
