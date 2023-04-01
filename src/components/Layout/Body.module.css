@@ -1,3 +1,17 @@
+.section {
+  display: flex;
+  justify-content: flex-end;
+
+  margin: 0rem 0.7rem 0.7rem;
+}
+
+.section select {
+  /* border-style: none; */
+  outline: none;
+  border: 1px solid #222;
+
+  padding: 0.3rem 0.7rem;
+}
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

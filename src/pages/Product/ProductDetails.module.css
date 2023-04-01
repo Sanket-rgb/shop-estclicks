@@ -3,6 +3,7 @@
   grid-template-columns: 41% 25% 34%;
   grid-template-rows: 55% 45%;
   /* height: 90vh; */
+  /* height: 100%; */
   grid-template-areas:
     "primary-image secondary-image1 info"
     "primary-image secondary-image2 navigation";
