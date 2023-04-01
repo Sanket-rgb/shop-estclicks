@@ -1,7 +1,7 @@
 const images = [
   {
     id: "0",
-    path: "/Images/Photographs/Animal1.jpg",
+    path: "/Images/Photographs/Animal1.webp",
     category: "ANIMALS",
     description: "Prescription : Vitamin Sea",
     location: "San Diego, CA",
@@ -11,7 +11,7 @@ const images = [
   },
   {
     id: "1",
-    path: "/Images/Photographs/Animal2.jpg",
+    path: "/Images/Photographs/Animal2.webp",
     category: "ANIMALS",
     description: "Sealiously cute",
     location: "San Diego, CA",
@@ -21,7 +21,7 @@ const images = [
   },
   {
     id: "2",
-    path: "/Images/Photographs/City1.jpg",
+    path: "/Images/Photographs/City1.webp",
     category: "CITY",
     description: "Spotlight to the City lights",
     location: "Dallas, TX",
@@ -31,7 +31,7 @@ const images = [
   },
   {
     id: "3",
-    path: "/Images/Photographs/City2.jpg",
+    path: "/Images/Photographs/City2.webp",
     category: "CITY",
     description: "The sky's the limit at Reunion Tower",
     location: "Dallas, TX",
@@ -41,7 +41,7 @@ const images = [
   },
   {
     id: "4",
-    path: "/Images/Photographs/Food.jpg",
+    path: "/Images/Photographs/Food.webp",
     category: "FOOD",
     description: "How festive this bowl looks!",
     location: "Fort-Worth, TX",
@@ -51,7 +51,7 @@ const images = [
   },
   {
     id: "5",
-    path: "/Images/Photographs/Nature1.jpg",
+    path: "/Images/Photographs/Nature1.webp",
     category: "NATURE",
     description: "Into the Woods",
     location: "Bellingham, WA",
@@ -61,7 +61,7 @@ const images = [
   },
   {
     id: "6",
-    path: "/Images/Photographs/Nature2.jpg",
+    path: "/Images/Photographs/Nature2.webp",
     category: "NATURE",
     description: "Somewhere on the Journey",
     location: "Samish Bay, WA",
@@ -71,7 +71,7 @@ const images = [
   },
   {
     id: "7",
-    path: "/Images/Photographs/Nature3.jpg",
+    path: "/Images/Photographs/Nature3.webp",
     category: "NATURE",
     description: "Ages old",
     location: "Seattle, WA",
@@ -81,7 +81,7 @@ const images = [
   },
   {
     id: "8",
-    path: "/Images/Photographs/other.jpg",
+    path: "/Images/Photographs/other.webp",
     category: "OTHER",
     description: "Geometry",
     location: "Fort-Worth, TX",
@@ -91,7 +91,7 @@ const images = [
   },
   {
     id: "9",
-    path: "/Images/Photographs/Other1.jpg",
+    path: "/Images/Photographs/Other1.webp",
     category: "OTHER",
     description: "Carousel",
     location: "Seattle, WA",
@@ -101,7 +101,7 @@ const images = [
   },
   {
     id: "10",
-    path: "/Images/Photographs/Portrait1.jpg",
+    path: "/Images/Photographs/Portrait1.webp",
     category: "PORTRAIT",
     description: "Getting ahead",
     location: "Seattle, WA",
@@ -111,7 +111,7 @@ const images = [
   },
   {
     id: "11",
-    path: "/Images/Photographs/Portrait2.jpg",
+    path: "/Images/Photographs/Portrait2.webp",
     category: "PORTRAIT",
     description: "Eyes on the Stars",
     location: "Seattle, WA",
@@ -121,7 +121,7 @@ const images = [
   },
   {
     id: "12",
-    path: "/Images/Photographs/Portrait3.jpg",
+    path: "/Images/Photographs/Portrait3.webp",
     category: "PORTRAIT",
     description: "Growth",
     location: "Seattle, WA",
@@ -131,7 +131,7 @@ const images = [
   },
   {
     id: "13",
-    path: "/Images/Photographs/Vehicle1.jpg",
+    path: "/Images/Photographs/Vehicle1.webp",
     category: "VEHICLE",
     description: "1100 Classic Coffman",
     location: "Tempe, AZ",
@@ -141,7 +141,7 @@ const images = [
   },
   {
     id: "14",
-    path: "/Images/Photographs/Vehicle2.jpg",
+    path: "/Images/Photographs/Vehicle2.webp",
     category: "VEHICLE",
     description: "Grand Theft Auto",
     location: "Los Angeles, CA",
@@ -149,7 +149,7 @@ const images = [
     quantity: "50",
     color: "#0a0048",
   },
-];
+]
 
 // const colors = [
 //   // "#43272c",
@@ -166,4 +166,4 @@ const images = [
 //   // "#005b63",
 //   // "#dbd7d1",
 // ]
-export { images };
+export { images }

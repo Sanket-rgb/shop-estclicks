@@ -1,14 +1,14 @@
-import { localDBSize } from "@/Utils/localStorage";
-import React, { useEffect, useState } from "react";
-import Header from "./Layout/Header";
-import CartContext from "./store/cart-context";
+import { localDBSize } from "@/Utils/localStorage"
+import React, { useEffect, useState } from "react"
+import Header from "./Layout/Header"
+import CartContext from "./store/cart-context"
 
 const Layout = ({ children }) => {
-  const [cartSize, setCartSize] = useState(0);
+  const [cartSize, setCartSize] = useState(0)
 
   useEffect(() => {
-    setCartSize(localDBSize());
-  }, [cartSize]);
+    setCartSize(localDBSize())
+  }, [cartSize])
 
   // console.log(cartSize);
   return (
@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
         {children}
       </CartContext.Provider>
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
