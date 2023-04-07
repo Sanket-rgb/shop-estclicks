@@ -22,7 +22,7 @@ const Body = () => {
 
   return (
     <>
-      <div className={classes.section}>
+      {/* <div className={classes.section}>
         <select onChange={filterChangeHandler}>
           <option value="All">ALL</option>
           <option value="ANIMALS">ANIMALS</option>
@@ -33,7 +33,7 @@ const Body = () => {
           <option value="VEHICLE">VEHICLE</option>
           <option value="OTHER">OTHER</option>
         </select>
-      </div>
+      </div> */}
       <div className={classes["grid-container"]}>
         {imageArray.map((image) => (
           <ImageComponent key={Math.random().toString()} data={image} />
