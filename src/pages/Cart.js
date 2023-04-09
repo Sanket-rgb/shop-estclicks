@@ -21,8 +21,13 @@ const Cart = () => {
   // const [cartTotal, setCartTotal]
 
   useEffect(() => {
-    setCartList(JSON.parse(localStorage.getItem("cart")))
-
+    let cart = JSON.parse(localStorage.getItem("cart"))
+    console.log(cart)
+    if (!cart) {
+      setCartList([])
+    } else {
+      setCartList(JSON.parse(localStorage.getItem("cart")))
+    }
     setIsLoading(false)
   }, [valueChange])
 
