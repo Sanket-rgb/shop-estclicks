@@ -53,7 +53,7 @@
   grid-area: secondary-image2;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../../../public/CartIcon/wall4.jpeg);
+  background-image: url(../../../public/CartIcon/wall5.jpeg);
 
   padding-top: 10px;
 }
@@ -63,6 +63,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  /* background-color: rgba(0, 0, 0, 0.8); */
   background: rgba(255, 255, 255, 0.854);
   aspect-ratio: 4/5;
   /* margin: 1em 4rem; */
