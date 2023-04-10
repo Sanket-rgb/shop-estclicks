@@ -1,9 +1,9 @@
-import Link from "next/link";
-import classes from "./ImageComponent.module.css";
+import Link from "next/link"
+import classes from "./ImageComponent.module.css"
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 const ImageContainer = (props) => {
-  const [hover, setHover] = useState(false);
+  const [hover, setHover] = useState(false)
 
   // useEffect(() => {
   //   setTimeout(function () {
@@ -11,13 +11,13 @@ const ImageContainer = (props) => {
   //   }, 2000);
   // }, [hover]);
   const gridCellInvisibile = () => {
-    setHover(true);
-    console.log();
-  };
+    setHover(true)
+    console.log()
+  }
 
   const gridCellVisibile = () => {
-    setHover(false);
-  };
+    setHover(false)
+  }
 
   return (
     <>
@@ -26,7 +26,7 @@ const ImageContainer = (props) => {
           onTouchStart={gridCellInvisibile}
           onMouseOver={gridCellInvisibile}
           onMouseOut={gridCellVisibile}
-          style={{ background: props.data.color }}
+          style={{ background: props.data.background_color }}
           className={classes["grid-cell"]}
         >
           <div className={classes["image-container"]}>{props.children}</div>
@@ -43,7 +43,7 @@ const ImageContainer = (props) => {
           onMouseOver={gridCellInvisibile}
           onMouseOut={gridCellVisibile}
           className={classes.description}
-          style={{ background: props.data.color }}
+          style={{ background: props.data.background_color }}
         >
           <div onMouseOver={gridCellInvisibile} onMouseOut={gridCellInvisibile}>
             {props.data.description}
@@ -53,10 +53,10 @@ const ImageContainer = (props) => {
         </Link>
       )}
     </>
-  );
-};
+  )
+}
 
-export default ImageContainer;
+export default ImageContainer
 
 {
   /* <Link
