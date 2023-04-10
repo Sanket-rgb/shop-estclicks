@@ -14,6 +14,8 @@ export default function Home() {
           content="Check out the collection of unique photographs."
           key="desc"
         />
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
       </Head>
       <Body />
       <Footer />
