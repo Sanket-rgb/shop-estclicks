@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta
           name="description"
           content="Shop exclusive digital photographs from estclicks."
