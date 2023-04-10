@@ -6,10 +6,11 @@ const ImageComponent = (props) => {
   return (
     <ImageContainer data={props.data}>
       <Image
+        loading="lazy"
         placeholder="blur"
         blurDataURL="default"
         className={classes.image}
-        src={props.data.path}
+        src={props.data.image_url}
         alt={props.data.category}
         fill
         sizes="(max-width: 768px) 100vw,

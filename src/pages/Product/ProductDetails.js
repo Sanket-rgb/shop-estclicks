@@ -21,7 +21,7 @@ const ProductDetails = () => {
       </Head>
       <section className={classes["product-grid-container"]}>
         <div
-          style={{ background: query.color }}
+          style={{ background: query.background_color }}
           className={classes["primary-image"]}
         >
           <div className={classes["image-container"]}>
@@ -29,7 +29,7 @@ const ProductDetails = () => {
               placeholder="blur"
               blurDataURL="default"
               className={classes.image}
-              src={query.path}
+              src={query.image_url}
               alt={query.category}
               fill
               sizes="(max-width: 768px) 100vw,
@@ -43,7 +43,7 @@ const ProductDetails = () => {
             placeholder="blur"
             blurDataURL="default"
             className={classes.image}
-            src={query.path}
+            src={query.image_url}
             alt={query.category}
             fill
             sizes="(max-width: 768px) 100vw,
@@ -57,7 +57,7 @@ const ProductDetails = () => {
               placeholder="blur"
               blurDataURL="default"
               className={classes.image2}
-              src={query.path}
+              src={query.image_url}
               alt={query.category}
               fill
               sizes="(max-width: 768px) 100vw,
@@ -67,7 +67,10 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        <div style={{ background: query.color }} className={classes["info"]}>
+        <div
+          style={{ background: query.background_color }}
+          className={classes["info"]}
+        >
           <div className={classes["info-description"]}>
             <h4>{query.description}</h4>
             <div className={classes.details}>
