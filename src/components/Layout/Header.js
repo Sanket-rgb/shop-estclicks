@@ -32,7 +32,7 @@ const Header = () => {
           src="https://cdn.shopify.com/s/files/1/0516/4082/8070/t/2/assets/cart.svg"
           alt="Cart - estclicks"
           width={30}
-          height={23.93}
+          height={23}
         ></Image>
       </Link>
     </header>
