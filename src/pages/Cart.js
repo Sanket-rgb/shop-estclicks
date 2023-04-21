@@ -1,5 +1,6 @@
 import CartContext from "@/components/store/cart-context"
 import Button from "@/components/UI/Button"
+import getStripe from "@/lib/getStripe"
 import {
   addItemToCart,
   cartTotal,
@@ -22,7 +23,6 @@ const Cart = () => {
 
   useEffect(() => {
     let cart = JSON.parse(localStorage.getItem("cart"))
-    console.log(cart)
     if (!cart) {
       setCartList([])
     } else {
@@ -53,6 +53,31 @@ const Cart = () => {
       return (+prevState - +quantity).toString()
     })
     setValueChange(Math.random().toString())
+  }
+
+  const handleCheckout = async () => {
+    const stripe = await getStripe()
+    // console.log(cartList)
+    const response = await fetch("/api/stripe", {
+      // mode: "no-cors",
+      method: "POST",
+      // headers: {
+      //   "Content-Type": "application/json",
+      // },
+      body: JSON.stringify(cartList),
+    })
+
+    if (response.status === 500) return
+
+    console.log(response)
+    const data = await response.json()
+
+    console.log(data)
+    // toast.loading("Redirecting...")
+
+    stripe.redirectToCheckout({
+      sessionId: data.id,
+    })
   }
 
   return (
@@ -125,7 +150,9 @@ const Cart = () => {
       )}
       <div className={classes["checkout-buttons"]}>
         {cartList.length !== 0 && (
-          <Button className={classes.button}>checkout now</Button>
+          <Button className={classes.button} onClick={handleCheckout}>
+            checkout now
+          </Button>
         )}
         <Link href="/" className={classes["button-wrapper"]}>
           <Button className={classes.button}>keep shopping</Button>

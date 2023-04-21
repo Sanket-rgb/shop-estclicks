@@ -1,37 +1,37 @@
-import { addItemToCart } from "@/Utils/localStorage";
-import { useContext, useState } from "react";
-import CartContext from "../../components/store/cart-context";
-import Button from "../../components/UI/Button";
+import { addItemToCart } from "@/Utils/localStorage"
+import { useContext, useState } from "react"
+import CartContext from "../../components/store/cart-context"
+import Button from "../../components/UI/Button"
 
-import classes from "./ProductQuantitySelector.module.css";
+import classes from "./ProductQuantitySelector.module.css"
 const ProductQuantitySelector = (props) => {
-  const [quantity, setQuantity] = useState("0");
+  const [quantity, setQuantity] = useState("0")
 
-  const { setCartSize } = useContext(CartContext);
+  const { setCartSize } = useContext(CartContext)
 
   const decrementQuantity = () => {
     if (+quantity <= 0) {
-      return;
+      return
     }
 
-    setQuantity((+quantity - 1).toString());
-  };
+    setQuantity((+quantity - 1).toString())
+  }
 
   const increaseQuantity = () => {
     if (+quantity >= props.data.quantity / 2) {
-      return;
+      return
     }
 
-    setQuantity((+quantity + 1).toString());
-  };
+    setQuantity((+quantity + 1).toString())
+  }
   const addToCart = (name, price) => {
-    addItemToCart(name, price, quantity);
+    addItemToCart(name, price, quantity)
 
     setCartSize((prevState) => {
-      return (+prevState + +quantity).toString();
-    });
-    setQuantity("0");
-  };
+      return (+prevState + +quantity).toString()
+    })
+    setQuantity("0")
+  }
 
   return (
     <div className={classes["info-buttons"]}>
@@ -47,7 +47,7 @@ const ProductQuantitySelector = (props) => {
         add to cart
       </Button>
     </div>
-  );
-};
+  )
+}
 
-export default ProductQuantitySelector;
+export default ProductQuantitySelector
