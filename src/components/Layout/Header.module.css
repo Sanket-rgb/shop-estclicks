@@ -51,12 +51,12 @@
 
 @media screen and (max-width: 770px) {
   .header {
-    height: 80px;
+    /* height: 80px; */
   }
 }
 
 @media screen and (max-width: 1029px) {
   .header {
-    position: sticky;
+    /* position: sticky; */
   }
 }
