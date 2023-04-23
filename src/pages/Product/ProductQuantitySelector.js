@@ -25,7 +25,7 @@ const ProductQuantitySelector = (props) => {
     setQuantity((+quantity + 1).toString())
   }
   const addToCart = (name, price) => {
-    addItemToCart(name, price, quantity)
+    addItemToCart(name, price, quantity, props.data.image_url)
 
     setCartSize((prevState) => {
       return (+prevState + +quantity).toString()
