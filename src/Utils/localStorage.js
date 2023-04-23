@@ -1,8 +1,9 @@
-export const addItemToCart = (name, price, quantity) => {
+export const addItemToCart = (name, price, quantity, image) => {
   const itemObject = {
     name: name,
     price: price,
     quantity: quantity,
+    image: image,
   }
 
   const itemInstance = localStorage.getItem("cart")
