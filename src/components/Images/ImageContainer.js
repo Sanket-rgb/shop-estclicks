@@ -1,7 +1,7 @@
 import Link from "next/link"
-import classes from "./ImageComponent.module.css"
+import classes from "../../styles/Image/ImageComponent.module.scss"
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 const ImageContainer = (props) => {
   const [hover, setHover] = useState(false)
 
@@ -57,14 +57,3 @@ const ImageContainer = (props) => {
 }
 
 export default ImageContainer
-
-{
-  /* <Link
-            href={{
-              pathname: "/Product/ProductDetails",
-              query: props.data,
-            }}
-          >
-            hello
-          </Link> */
-}

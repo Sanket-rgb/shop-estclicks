@@ -2,7 +2,7 @@ import Button from "@/components/UI/Button"
 import Link from "next/link"
 import React, { useEffect } from "react"
 
-import classes from "../styles/success.module.scss"
+import classes from "../styles/SuccessPage/success.module.scss"
 const Success = () => {
   useEffect(() => {
     localStorage.clear()

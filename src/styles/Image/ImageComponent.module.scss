@@ -1,25 +1,17 @@
 .grid-cell {
   aspect-ratio: 1;
   padding: 1rem 2rem;
-}
 
-.image-container {
-  height: 100%;
-  background: white;
-  position: relative;
+  .image-container {
+    height: 100%;
+    background: white;
+    position: relative;
+  }
 }
 
 .image {
   padding: 0.5rem 0.5rem;
   object-fit: cover;
-}
-
-.bar {
-  height: 2px;
-  border-radius: 2px;
-  width: 4.5%;
-  margin: 0.5rem;
-  background: rgba(255, 255, 255, 0.726);
 }
 
 .description {
@@ -38,6 +30,14 @@
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
+
+  .bar {
+    height: 2px;
+    border-radius: 2px;
+    width: 4.5%;
+    margin: 0.5rem;
+    background: rgba(255, 255, 255, 0.726);
+  }
 }
 
 .description > div:first-child,

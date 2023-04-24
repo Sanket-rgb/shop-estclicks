@@ -3,8 +3,7 @@ import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import Button from "../../components/UI/Button"
-import classes from "./ProductDetails.module.css"
+import classes from "../../styles/Product/ProductDetails.module.scss"
 const ProductDetails = () => {
   const router = useRouter()
   const query = router.query
@@ -83,13 +82,12 @@ const ProductDetails = () => {
               <br></br>
               <p>Signed and numbered</p>
               <p>
-                @
                 <Link
                   href={"https://www.instagram.com/estclicks/"}
                   className={classes["social-media-link"]}
                   target="_blank"
                 >
-                  estclicks
+                  @estclicks
                 </Link>{" "}
                 original
               </p>

@@ -1,0 +1,155 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  width: 61.8%;
+  padding: 2.0531400966vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.9057971014vw;
+
+  h1 {
+    font-size: 1.2em;
+    margin-right: 6.52em -0.25em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    font-weight: 550;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+}
+
+.empty-cart {
+  font-size: 1vw;
+  margin-top: 1.5rem;
+}
+
+.cart-contents {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+
+  margin-top: 1.5rem;
+  /* background: red; */
+
+  .inc-dec-button-container {
+    display: flex;
+    gap: 3px;
+  }
+
+  .inc-dec-buttons {
+    cursor: pointer;
+    position: relative;
+
+    padding: 1em;
+    background: transparent;
+    border: 1px solid #222;
+  }
+}
+
+.product-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+
+  font-size: 1vw;
+  margin: 0rem 0.7rem;
+  height: auto;
+
+  .item-count {
+    width: 70%;
+  }
+  .item-subtotal {
+    display: flex;
+    align-self: flex-end;
+    width: 30%;
+  }
+}
+
+.cart-total {
+  place-self: flex-end;
+  font-size: 1.1333em;
+  letter-spacing: 0.25em;
+  text-align: right;
+  margin-top: 2em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.checkout-buttons {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 5rem;
+  gap: 0.2rem;
+
+  .button-wrapper {
+    width: 38.2%;
+  }
+
+  .button-wrapper > .button:last-child {
+    width: 100%;
+  }
+
+  .button:first-child {
+    height: 5vh;
+    width: 38.2%;
+    padding: 5.28px 15.84px;
+    color: #222;
+    background: transparent;
+    border: 1px solid #222;
+
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.1333em;
+    letter-spacing: 0.25em;
+    line-height: 1.5;
+
+    cursor: pointer;
+  }
+
+  .button:hover {
+    color: white;
+    background: #222;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 862px) {
+  .cart {
+    width: 100%;
+    padding: 4vw;
+
+    h1 {
+      font-size: 3.5vw;
+    }
+  }
+
+  .empty-cart {
+    font-size: 3vw;
+  }
+
+  .product-details {
+    font-size: 3.5vw;
+  }
+
+  .cart-total {
+    font-size: 3.5vw;
+  }
+  .checkout-buttons {
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 4rem;
+    font-size: 3vw;
+
+    .button-wrapper {
+      width: 60%;
+    }
+    .button:first-child {
+      width: 60%;
+    }
+  }
+}
