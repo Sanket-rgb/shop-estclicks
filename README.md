@@ -34,3 +34,10 @@
 <img src='/public/Screenshots/Cart.png'/>
 
 </div>
+
+<h3 align='center'>Payment Page 🧾</h3>
+
+<div align='center'>
+<img src='/public/Screenshots/paymentPage.png'/>
+
+</div>
