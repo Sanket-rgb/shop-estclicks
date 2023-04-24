@@ -3,7 +3,7 @@ import { useContext, useState } from "react"
 import CartContext from "../../components/store/cart-context"
 import Button from "../../components/UI/Button"
 
-import classes from "./ProductQuantitySelector.module.css"
+import classes from "../../styles/Product/ProductQuantitySelector.module.scss"
 const ProductQuantitySelector = (props) => {
   const [quantity, setQuantity] = useState("0")
 

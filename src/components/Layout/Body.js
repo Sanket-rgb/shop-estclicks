@@ -1,6 +1,5 @@
-import classes from "./Body.module.css"
+import classes from "../../styles/Layout/Body.module.scss"
 
-import { images } from "@/Utils/Photos"
 import ImageComponent from "../Images/ImageComponent"
 import { useEffect, useState } from "react"
 import supabase from "@/Utils/Supabase"
@@ -68,7 +67,6 @@ const Body = () => {
       </div> */}
       <div className={classes["grid-container"]}>
         {tableData.map((image) => (
-          // <p key="123">{image.category}</p>
           <ImageComponent key={Math.random().toString()} data={image} />
         ))}
       </div>

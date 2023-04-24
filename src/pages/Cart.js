@@ -13,7 +13,7 @@ import Image from "next/image"
 import Link from "next/link"
 import React, { useContext, useEffect, useState } from "react"
 
-import classes from "../styles/Cart.module.css"
+import classes from "../styles/Cart/Cart.module.scss"
 const Cart = () => {
   const [cartList, setCartList] = useState([])
   const [isLoading, setIsLoading] = useState(true)
@@ -128,20 +128,19 @@ const Cart = () => {
                 ${+cartlist.price * +cartlist.quantity},00
               </div>
             </div>
-            <div className={classes["delete-entry"]}>
-              <Button
-                className={classes["inc-dec-buttons"]}
-                onClick={() =>
-                  removeItemHandler(cartlist.name, cartlist.quantity)
-                }
-              >
-                <Image
-                  fill
-                  alt="delete"
-                  src="https://cdn.shopify.com/s/files/1/0516/4082/8070/t/2/assets/x.svg"
-                ></Image>
-              </Button>
-            </div>
+
+            <Button
+              className={classes["inc-dec-buttons"]}
+              onClick={() =>
+                removeItemHandler(cartlist.name, cartlist.quantity)
+              }
+            >
+              <Image
+                fill
+                alt="delete"
+                src="https://cdn.shopify.com/s/files/1/0516/4082/8070/t/2/assets/x.svg"
+              ></Image>
+            </Button>
           </div>
         ))}
 

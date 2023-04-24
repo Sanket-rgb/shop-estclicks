@@ -1,12 +1,10 @@
-import { localDBSize } from "@/Utils/localStorage"
 import Image from "next/image"
 import Link from "next/link"
 import { useContext, useEffect, useState } from "react"
 import CartContext from "../store/cart-context"
-import { CartList } from "../store/cart-list"
-import classes from "./Header.module.css"
+import classes from "../../styles/Layout/Header.module.scss"
 const Header = () => {
-  const { cartSize, setCartSize } = useContext(CartContext)
+  const { cartSize } = useContext(CartContext)
 
   return (
     <header className={classes.header}>
@@ -14,7 +12,6 @@ const Header = () => {
         <Image
           placeholder="blur"
           blurDataURL="default"
-          className={classes.image}
           src="/CartIcon/skyline5.jpeg"
           alt="Cart - estclicks"
           fill
@@ -28,7 +25,6 @@ const Header = () => {
         <div className={classes.quantity}>{cartSize}</div>
 
         <Image
-          // className={classes.image}
           src="https://cdn.shopify.com/s/files/1/0516/4082/8070/t/2/assets/cart.svg"
           alt="Cart - estclicks"
           width={30}

@@ -3,7 +3,6 @@ import Footer from "@/components/Layout/Footer"
 import Head from "next/head"
 import { Fragment, useState } from "react"
 
-var cartItems = undefined
 export default function Home() {
   return (
     <Fragment>

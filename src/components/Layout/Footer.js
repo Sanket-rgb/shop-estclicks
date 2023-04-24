@@ -1,11 +1,11 @@
 import Button from "../UI/Button"
-import classes from "./Footer.module.css"
+import classes from "../../styles/Layout/Footer.module.scss"
 const Footer = () => {
   return (
     <footer className={classes.grid}>
       <form className={classes.form}>
         <input type="email" placeholder="Your email"></input>
-        <button className={classes.button}>sign up for shop news</button>
+        <Button className={classes.button}>sign up for shop news</Button>
       </form>
       <div className={classes["extra-info"]}>
         <p>Shipping</p>

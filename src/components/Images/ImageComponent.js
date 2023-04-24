@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import classes from "./ImageComponent.module.css"
+import classes from "../../styles/Image/ImageComponent.module.scss"
 import ImageContainer from "./ImageContainer"
 const ImageComponent = (props) => {
   return (

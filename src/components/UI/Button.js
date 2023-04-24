@@ -1,4 +1,4 @@
-import classes from "./Button.module.css";
+import classes from "../../styles/UI/Button.module.scss"
 const Button = (props) => {
   return (
     <button
@@ -7,7 +7,7 @@ const Button = (props) => {
     >
       {props.children}
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button
